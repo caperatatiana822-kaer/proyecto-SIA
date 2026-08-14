@@ -1,6 +1,5 @@
 const asistencia = require('../models/asistenciaModel');
 
-
 // crear registro de asistencia
 const asistenciaCreate = async (data) => {
     try {

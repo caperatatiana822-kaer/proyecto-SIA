@@ -1,16 +1,17 @@
 class Response {
-    constructor(message, data, errors) {
+    constructor(message, data, error) {
+        this.success = !error;
         this.message = message;
         this.data = data;
-        this.errors = errors;
+        this.error = error;
     }
 
     get json() {
         return {
-            success: !this.errors || this.errors.length === 0,
+            success: this.success,
             message: this.message,
             data: this.data,
-            errors: this.errors,
+            errors: this.error,
         };
     }
 }

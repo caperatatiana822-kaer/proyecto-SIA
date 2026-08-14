@@ -62,17 +62,17 @@ const createAprendiz = async (req, res) => {
         // tipo de documento
         // numero de documento
 
-        const { nombres, apellidos, tipoDocumento, numeroDocumento } = req.body;
+        const { nombre, apellido, tipoDocumento, numeroDocumento } = req.body;
 
         var errors = [];
 
         // Validaciones
 
-        if (!nombres || nombres.trim() === "") {
+        if (!nombre || nombre.trim() === "") {
             errors.push("El nombre del aprendiz es obligatorio");
         }
 
-        if (!apellidos || apellidos.trim() === "") {
+        if (!apellido || apellido.trim() === "") {
             errors.push("El apellido del aprendiz es obligatorio");
         }
 
@@ -92,8 +92,8 @@ const createAprendiz = async (req, res) => {
         }
 
         data = {
-            nombres,
-            apellidos,
+            nombre,
+            apellido,
             tipoDocumento,
             numeroDocumento
         }
@@ -120,7 +120,7 @@ const updateAprendiz = async (req, res) => {
 
         const { id } = req.params;
 
-        const { nombres, apellidos, tipoDocumento, numeroDocumento } = req.body;
+        const { nombre, apellido, tipoDocumento, numeroDocumento } = req.body;
 
         var errors = [];
 
@@ -130,11 +130,11 @@ const updateAprendiz = async (req, res) => {
             errors.push("El ID del aprendiz es obligatorio");
         }
 
-        if (!nombres || nombres.trim() === "") {
+        if (!nombre || nombre.trim() === "") {
             errors.push("El nombre del aprendiz es obligatorio");
         }
 
-        if (!apellidos || apellidos.trim() === "") {
+        if (!apellido || apellido.trim() === "") {
             errors.push("El apellido del aprendiz es obligatorio");
         }
 
@@ -155,8 +155,8 @@ const updateAprendiz = async (req, res) => {
 
         data = {
             id,
-            nombres,
-            apellidos,
+            nombre,
+            apellido,
             tipoDocumento,
             numeroDocumento
         }

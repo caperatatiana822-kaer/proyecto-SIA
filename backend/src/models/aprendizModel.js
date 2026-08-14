@@ -9,11 +9,11 @@ const Aprendiz = sequelize.define(
             primaryKey: true,
             autoIncrement: true,
         },
-        nombres: {
+        nombre: {
             type: DataTypes.STRING(100),
             allowNull: false,
         },
-        apellidos: {
+        apellido: {
             type: DataTypes.STRING(100),
             allowNull: false,
         },
