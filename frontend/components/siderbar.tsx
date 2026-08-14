@@ -67,12 +67,12 @@ export function AppSidebar() {
 
                     <div className="px-3 py-4">
                         <div className="flex items-center gap-3">
-                            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-600 text-sm font-bold text-white">
-                                SIA
-                            </div>
+                            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-black text-sm font-bold text-white">
+    SIA
+</div>
 
                             <div>
-                                <p className="font-semibold text-blue-900">
+                                <p className="font-semibold text-gray-900">
                                     Sistema de Información
                                 </p>
 
@@ -195,22 +195,22 @@ export function AppSidebar() {
                 </SidebarGroup>
             </SidebarContent>
 
-            {/* PARTE INFERIOR */}
+       
             <SidebarFooter className="border-t px-3 py-3">
 
                 <div className="flex items-center gap-3">
 
-                    {/* Avatar */}
-                    <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-blue-600 text-sm font-semibold text-white">
-                        {usuarioActual.inicial}
-                    </div>
+                 
+                            <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-black text-sm font-semibold text-white">
+    {usuarioActual.inicial}
+</div>
 
-                    {/* Información usuario */}
+                  
                     <div className="min-w-0 flex-1">
 
-                        <p className="truncate text-sm font-semibold text-blue-900">
-                            {usuarioActual.nombre}
-                        </p>
+                        <p className="truncate text-sm font-semibold text-gray-900">
+    {usuarioActual.nombre}
+</p>
 
                         <p className="truncate text-xs text-gray-500">
                             {usuarioActual.correo}
@@ -218,7 +218,7 @@ export function AppSidebar() {
 
                     </div>
 
-                    {/* Cerrar sesión */}
+                  
                     <button
                         type="button"
                         onClick={() => setLogoutDialogOpen(true)}
@@ -232,7 +232,7 @@ export function AppSidebar() {
 
             </SidebarFooter>
 
-            {/* MODAL CERRAR SESIÓN */}
+         
             <Dialog
                 open={logoutDialogOpen}
                 onOpenChange={setLogoutDialogOpen}
